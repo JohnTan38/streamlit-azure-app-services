@@ -15,7 +15,7 @@ import datetime as datetime
 #from email import encoders
 #from email.mime.base import MIMEBase
 #from email.mime.multipart import MIMEMultipart
-@from email.mime.text import MIMEText
+#@from email.mime.text import MIMEText
 
 st.set_page_config('PSA Rebates', page_icon="🏛️", layout='wide')
 def title(url):
