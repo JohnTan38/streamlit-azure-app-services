@@ -4,5 +4,5 @@ streamlit==1.5.0
 pandas
 protobuf==3.20.*
 vega-datasets
-pywin32==300
+#pywin32==300
 openpyxl
