@@ -77,8 +77,7 @@ def select_reorder(df):
 title_main('PSA Rebates')
 #pythoncom.CoInitialize() 
 
-usr_name = st.sidebar.multiselect('Select your username', ['john.tan', 'linda.lim'], placeholder='Choose 1', 
-                          max_selections=2)
+usr_name = st.sidebar.multiselect('Select your username', ['john.tan', 'linda.lim'], max_selections=2)
 if usr_name is not None:
     if st.sidebar.button('Confirm Username'):
             usr_email = usr_name[0]+ '@sh-cogent.com.sg' #your outlook email address
