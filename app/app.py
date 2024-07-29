@@ -3,19 +3,19 @@ import pandas as pd
 import numpy as np
 import math,re
 from datetime import datetime
-import win32com.client
+#import win32com.client
 import glob, os, openpyxl, re
-import pythoncom
+#import pythoncom
 import warnings
 warnings.filterwarnings("ignore")
 
 import datetime as datetime
 
-import smtplib, email, ssl
-from email import encoders
-from email.mime.base import MIMEBase
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
+#import smtplib, email, ssl
+#from email import encoders
+#from email.mime.base import MIMEBase
+#from email.mime.multipart import MIMEMultipart
+@from email.mime.text import MIMEText
 
 st.set_page_config('PSA Rebates', page_icon="🏛️", layout='wide')
 def title(url):
@@ -75,7 +75,7 @@ def select_reorder(df):
     return df[df['STATUS'] == 'REORDER']
 
 title_main('PSA Rebates')
-pythoncom.CoInitialize() 
+#pythoncom.CoInitialize() 
 
 usr_name = st.sidebar.multiselect('Select your username', ['john.tan', 'linda.lim'], placeholder='Choose 1', 
                           max_selections=2)
@@ -83,7 +83,7 @@ if usr_name is not None:
     if st.sidebar.button('Confirm Username'):
             usr_email = usr_name[0]+ '@sh-cogent.com.sg' #your outlook email address
             st.sidebar.write(f'User email: {usr_email}')
-            outlook = win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI") 
+            #outlook = win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI") 
 def user_email(usr_name):
     usr_email = usr_name[0] + '@sh-cogent.com.sg'
     return usr_email
@@ -387,8 +387,8 @@ elif dataUpload is not None:
             except FileExistsError:
                     calculate_rebate(add_offpeak_columns(psa_rebate_indicator)).to_csv("C:/Users/"+usr_name[0]+ "/Downloads/"+ 'psa_rebate_1.csv')
             
-            usr_email = user_email(usr_name)
-            send_email_psa_reabte(offpeak_rebate_sums(calculate_rebate(add_offpeak_columns(psa_rebate_indicator))),usr_email)
+            #usr_email = user_email(usr_name)
+            #send_email_psa_reabte(offpeak_rebate_sums(calculate_rebate(add_offpeak_columns(psa_rebate_indicator))),usr_email)
 
 
 footer_html = """
