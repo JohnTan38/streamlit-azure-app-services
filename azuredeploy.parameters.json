@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.1",
     "parameters": {
         "webAppName": {
-            "value": "streamlit-azure-app-services-example"
+            "value": "streamlit-azure-app"
         },
         "sku": {
-            "value": "B2"
+            "value": "B3"
         },
         "linuxFxVersion": {
             "value": "PYTHON|3.10"
