@@ -6,7 +6,7 @@
             "value": "streamlit-azure-app-services-example"
         },
         "sku": {
-            "value": "P0v3"
+            "value": "P3"
         },
         "linuxFxVersion": {
             "value": "PYTHON|3.10"
